@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'UNO HOMES</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Real Estate Investment Opportunities</h1>
+</header>
+
+<main>
+  <section id="building-plans">
+    <article class="plan">
+      <h2>Detached Duplex</h2>
+      <img src="path/to/detached-duplex.jpg" alt="Detached Duplex">
+    </article>
+    <article class="plan">
+      <h2>Two Bedroom Semi-Detached Bungalow</h2>
+      <img src="path/to/semi-detached-bungalow.jpg" alt="Two Bedroom Semi-Detached Bungalow">
+    </article>
+    <article class="plan">
+      <h2>Four Bedroom Terraced Units</h2>
+      <img src="path/to/terraced-units.jpg" alt="Four Bedroom Terraced Units">
+    </article>
+    <article class="plan">
+      <h2>Two & Three Bedroom Flats</h2>
+      <img src="path/to/flats.jpg" alt="Two & Three Bedroom Flats">
+    </article>
+  </section>
+
+  <section id="master-plan">
+    <h2>Estate Master Plan</h2>
+    <img src="path/to/master-plan.jpg" alt="Estate Master Plan">
+  </section>
+
+  <section id="partners">
+    <h2>Partner Sponsor Packages</h2>
+    <div class="partner platinum">
+      <h3>Platinum Partner - ₦20,000,000.00+</h3>
+      <ul>
+        <li>Get up to 5 units at 25% discount</li>
+        <li>Right of first choice</li>
+        <li>Choose from all prototypes</li>
+      </ul>
+    </div>
+    <div class="partner gold">
+      <h3>Gold Partner - ₦10,000,000.00+</h3>
+      <ul>
+        <li>Get up to 4 units at 20% discount</li>
+        <li>Right of first choice</li>
+        <li>Choose from 4 prototypes</li>
+      </ul>
+    </div>
+    <div class="partner silver">
+      <h3>Silver Partner - ₦5,000,000.00+</h3>
+      <ul>
+        <li>Get up to 2 units at 15% discount</li>
+        <li>Choose from 3 prototypes</li>
+      </ul>
+    </div>
+    <div class="partner bronze">
+      <h3>Bronze Partner - ₦2,500,000.00+</h3>
+      <ul>
+        <li>Get a unit at 10% discount</li>
+        <li>Choose from 2 prototypes</li>
+      </ul>
+    </div>
+
+    <!-- Interest Form -->
+      <div class="form-container">
+        <h2>Express Your Interest</h2>
+        <form id="interestForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="package">Choose Package</label>
+            <select id="package" required>
+              <option value="">Select a package</option>
+              <option value="platinum">Platinum Partner</option>
+              <option value="gold">Gold Partner</option>
+              <option value="silver">Silver Partner</option>
+              <option value="bronze">Bronze Partner</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span id="close-modal" class="close">×</span>
+        <p id="modal-content"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2024 L'UNO HOMES</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
