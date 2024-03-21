@@ -1,15 +1,19 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #e6f5e6; /* A light green shade for a clean, eco-friendly vibe */
+  color: #333; /* Darker text for better readability */
 }
 
 header, main, footer {
   text-align: center;
+  background-color: #e6f5e6; /* Consistent background color with the body */
 }
 
 .plan, .partner {
   margin: 20px;
   padding: 10px;
   border: 1px solid #ddd;
+  background-color: #fff; /* White background for the content areas */
 }
 
 .plan img, #master-plan img {
@@ -20,10 +24,12 @@ header, main, footer {
 .partner {
   display: inline-block;
   width: 45%;
+  background-color: #d9edf7; /* A soft blue to signify trust and stability */
 }
 
 .partner h3 {
   margin: 0;
+  color: #0056b3; /* A strong blue for headings to draw attention */
 }
 
 ul {
@@ -34,6 +40,7 @@ ul {
 li::before {
   content: '✓';
   margin-right: 5px;
+  color: #4CAF50; /* Green checkmarks to emphasize eco-friendly commitments */
 }
 
 /* The Modal (background) */
@@ -57,6 +64,11 @@ li::before {
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Initial state of the modal is hidden */
+#modal {
+  display: none;
 }
 
 /* The Close Button */

@@ -10,7 +10,26 @@ function showDetails(planType) {
   alert(details[planType]);
 }
 
-// Basic form validation
+// Function to handle AJAX requests 
+function AJAX(data) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://www.lunohomes.com.ng', true); // Corrected URL
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        // Handle successful response from the server
+        alert('Success: ' + xhr.responseText);
+      } else {
+        // Handle error
+        alert('Error: ' + xhr.statusText);
+      }
+    }
+  };
+  xhr.send(JSON.stringify({ message: data }));
+}
+
+// Basic form validation and AJAX request
 document.getElementById('interestForm').addEventListener('submit', function(event) {
   event.preventDefault();
   var name = document.getElementById('name').value;
@@ -20,38 +39,24 @@ document.getElementById('interestForm').addEventListener('submit', function(even
     // Process the form (send data to server, etc.)
     AJAX('Thank you for your interest, ' + name + '! We will contact you at ' + email + '.');
   } else {
-    AJAX('Please fill out all the fields.');
+    alert('Please fill out all the fields.');
   }
+});
 
-  });
-
-// Event listeners for each building plan image
+// Combined Event listeners for DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
   var images = document.querySelectorAll('#building-plans img');
   images.forEach(function(img) {
     img.addEventListener('click', function() {
       var planType = img.alt.toLowerCase().replace(/ /g, '');
-      showDetails(planType);
+      openModal(planType);
     });
   });
-});
 
-// Function to handle AJAX requests
-function AJAX(message) 
-function AJAX(data) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'your-server-endpoint', true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      // Handle successful response from the server
-      alert('Success: ' + xhr.responseText);
-    } else if (xhr.readyState === 4) {
-      // Handle error
-      alert('Error: ' + xhr.statusText);
-    }
-  };
-  xhr.send(JSON.stringify({ message: data }));
+  var closeButton = document.getElementById('close-modal');
+  if (closeButton) {
+    closeButton.addEventListener('click', closeModal);
+  }
 });
 
 // Function to open a modal with details
@@ -65,33 +70,24 @@ function openModal(planType) {
 
   // Set the content of the modal
   var modalContent = document.getElementById('modal-content');
-  modalContent.textContent = details[planType];
+  if (modalContent) {
+    modalContent.textContent = details[planType];
+  }
 
   // Display the modal
   var modal = document.getElementById('modal');
-  modal.style.display = 'block';
+  if (modal) {
+    modal.style.display = 'block';
+  }
 }
 
 // Function to close the modal
 function closeModal() {
   var modal = document.getElementById('modal');
-  modal.style.display = 'none';
+  if (modal) {
+    modal.style.display = 'none';
+  }
 }
-
-// Event listeners for each building plan image
-document.addEventListener('DOMContentLoaded', function() {
-  var images = document.querySelectorAll('#building-plans img');
-  images.forEach(function(img) {
-    img.addEventListener('click', function() {
-      var planType = img.alt.toLowerCase().replace(/ /g, '');
-      openModal(planType);
-    });
-  });
-
-  // Event listener for closing the modal
-  var closeButton = document.getElementById('close-modal');
-  closeButton.addEventListener('click', closeModal);
-});
 
 // Close the modal if the user clicks outside of it
 window.onclick = function(event) {

@@ -3,37 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'UNO HOMES</title>
+<title>L'UNỌ HOMES</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <h1>Real Estate Investment Opportunities</h1>
+  <h1>We've brought the world Home🌎.</h1>
 </header>
 
 <main>
   <section id="building-plans">
     <article class="plan">
       <h2>Detached Duplex</h2>
-      <img src="path/to/detached-duplex.jpg" alt="Detached Duplex">
+      <ul>
+          <li>₦55m for Building Shell. User shall finish to Estate details &amp; specifications.</li>
+      </ul>
+      <img src="images/detached-duplex.jpg" alt="Detached Duplex">
     </article>
     <article class="plan">
       <h2>Two Bedroom Semi-Detached Bungalow</h2>
-      <img src="path/to/semi-detached-bungalow.jpg" alt="Two Bedroom Semi-Detached Bungalow">
+      <ul>
+         <li>₦15m for Building Shell. User shall finish to Estate details &amp; specifications</li>
+      </ul>
+      <img src="images/semi-detached-bungalow.jpg" alt="Two Bedroom Semi-Detached Bungalow">
     </article>
     <article class="plan">
       <h2>Four Bedroom Terraced Units</h2>
-      <img src="path/to/terraced-units.jpg" alt="Four Bedroom Terraced Units">
+      <ul>
+         <li>₦45m for Building Shell. User shall finish to Estate details &amp; specifications</li>
+      </ul>
+      <img src="images/terraced-units.jpg" alt="Four Bedroom Terraced Units">
     </article>
     <article class="plan">
-      <h2>Two & Three Bedroom Flats</h2>
-      <img src="path/to/flats.jpg" alt="Two & Three Bedroom Flats">
+      <h2>Two &amp; Three Bedroom Flats</h2>
+      <ul>
+         <li>₦35m for Building Shell. User shall finish to Estate details &amp; specifications</li>
+      </ul>
+      <img src="images/flats.jpg" alt="Two & Three Bedroom Flats">
+      <div>
+        <h2>Payment Information</h2>
+        <p>A 20% deposit shall secure each unit prototype. A 4-staged payment structure shall complete the shell.</p>
+      </div>
     </article>
   </section>
 
   <section id="master-plan">
     <h2>Estate Master Plan</h2>
-    <img src="path/to/master-plan.jpg" alt="Estate Master Plan">
+    <img src="images/master-plan.jpg" alt="Estate Master Plan">
   </section>
 
   <section id="partners">
@@ -70,7 +86,7 @@
     </div>
 
     <!-- Interest Form -->
-      <div class="form-container">
+      <article class="form-container">
         <h2>Express Your Interest</h2>
         <form id="interestForm">
           <div class="form-group">
@@ -92,17 +108,16 @@
             </select>
           </div>
           <div class="form-group">
-            <button type="submit">Submit</button>
+            <button type="submit" aria-label="Submit Interest Form">Submit</button>
           </div>
         </form>
-      </div>
-    </div>
+      </article>
 
     <!-- The Modal -->
     <div id="modal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
-        <span id="close-modal" class="close">×</span>
+            <span id="close-modal" class="close×</span>
         <p id="modal-content"></p>
       </div>
     </div>
@@ -110,7 +125,11 @@
 </main>
 
 <footer>
-  <p>© 2024 L'UNO HOMES</p>
+  <p>© 2024 L'UNỌ HOMES</p>
+  <!-- Portfolio Button -->
+  <a href="https://silverbanks.github.io" target="_blank">
+    <button type="button">Visit Developer's Portfolio</button>
+  </a>
 </footer>
 
 <script src="script.js"></script>
