@@ -1,35 +1,47 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e6f5e6; /* A light green shade for a clean, eco-friendly vibe */
-  color: #333; /* Darker text for better readability */
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: #e8f5e9; /* A soft green background for a clean, eco-friendly vibe */
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 header, main, footer {
   text-align: center;
-  background-color: #e6f5e6; /* Consistent background color with the body */
+  padding: 1rem 0;
+}
+
+header h1 {
+  color: #2e7d32; /* Dark green color for the header to match the eco theme */
 }
 
 .plan, .partner {
   margin: 20px;
   padding: 10px;
   border: 1px solid #ddd;
-  background-color: #fff; /* White background for the content areas */
+  background-color: #fff;
+  border-radius: 4px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .plan img, #master-plan img {
   width: 100%;
   height: auto;
+  border-radius: 4px; /* Rounded corners for images */
 }
 
 .partner {
   display: inline-block;
   width: 45%;
-  background-color: #d9edf7; /* A soft blue to signify trust and stability */
+  background-color: #d9edf7;
+  margin-bottom: 20px; /* Space between partner blocks */
 }
 
 .partner h3 {
   margin: 0;
-  color: #0056b3; /* A strong blue for headings to draw attention */
+  color: #0056b3;
+  padding: 0.5rem 0; /* Padding for headings */
 }
 
 ul {
@@ -40,48 +52,85 @@ ul {
 li::before {
   content: '✓';
   margin-right: 5px;
-  color: #4CAF50; /* Green checkmarks to emphasize eco-friendly commitments */
+  color: #4CAF50; /* Green checkmarks for a clean, positive vibe */
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/* Form Styling */
+#interestForm {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+#interestForm .form-group {
+  margin-bottom: 1rem;
 }
 
-/* Initial state of the modal is hidden */
-#modal {
-  display: none;
+#interestForm label {
+  display: block;
+  margin-bottom: .5rem;
+  color: #333;
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+#interestForm input[type="text"],
+#interestForm input[type="email"],
+#interestForm select {
+  width: 100%;
+  padding: .8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
+#interestForm button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: #43a047; /* A vibrant green for the submit button */
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#interestForm button[type="submit"]:hover {
+  background-color: #388e3c; /* A darker green on hover for contrast */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #2e7d32; /* Dark green footer to complement the header */
+  color: white;
+  padding: 2rem 0;
+}
+
+footer p {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+footer a {
+  color: #81c784; /* Light green for links to stand out */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer button {
+  padding: 0.8rem 1.6rem;
+  background-color: #81c784; /* Light green for the button */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #66bb6a; /* A slightly darker green on hover */
 }
